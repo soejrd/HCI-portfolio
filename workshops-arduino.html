@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>HCI Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="./index.html" class="back">terug</a>
+        <h1>Arduino workshop</h2>
+            <main>
+                <button class="accordion">Exercise 3C</button>
+                <div class="panel" style="display: block">
+                    <p>Zoals misschien al gelijk te zien is gebruik ik een iets ander Arduino board. Ik heb zelf al een klein beetje ervaring met Arduino, ik ben namelijk een midi-controller aan het maken. Daarvoor gebruik ik een Teensy 3.2, een iets ander board, maar ik had nog een Arduino Nano liggen thuis, wat praktisch dezelfde functionaliteiten heeft als een Arduino Uno. De kit van tinytronics heb ik ook niet aangeschaft. Ik maak met een vriend regelmatig zelf audio-apparatuur, en had daardoor alle componenten al in huis.</p>
+                    <div class="imgContainer">
+                        <img src="./images/nano1.jpg" alt="">
+                        <img src="./images/nano2.jpg" class="left" alt="">
+                        <img src="./images/nano3.jpg" class="right" alt="">
+                    </div>
+                    <p>Ervaring met Arduino en Java heb ik echter niet, dus ik vond het al met al een leuke ervaring om dit allemaal te leren.</p>
+                    <img src="./images/arduino3c.png" class="right" alt="">
+                    <p>In het voorbeeld wordt verteld om 2 weerstanden te gebruiken voor de ledjes. In dit geval waren weerstanden niet nodig om een te hoge spanning voor de ledjes te voorkomen. De output van de digital pins is maximaal 40mA. Dit betekent dat het ledje een effectieve weerstand van <i>R = U / I</i>, <b>R = 3.3 / 0.04</b> = 82.5 Ohm heeft. Zelfs als de digitale pins de maximale 40mA leveren zal de led nooit doorbranden, die kan namelijk maximaal 150 mW aan. Vanuit <i>P = U * I</i> kun je opmaken dat I in <b>0.150 = 3.3 * I</b> op 45 mA uitkomt, om die reden heb ik geen weerstanden gebruikt.</p>
+                </div>
+                <button class="accordion">Exercise 4C</button>
+                <div class="panel">
+                   <img src="./images/arduino4C.png" alt="" class="right">
+                    <p>Voor deze opdracht heb ik een Sinusgolf gebruikt in plaats van een forloop. Ik weet hoe for-loops werken, ik kan ze goed gebruiken, ik weet echter totaal niet hoe een sinusgolffunctie te gebruiken is. Om elke opdracht leuk voor mijzelf te maken maak ik af en toe dit soort keuzes, die het eindresultaat niet veranderen. Bij het onderzoeken van deze functie op de website van Arduino las ik dat de sin() functie een parameter verwacht (in de vorm van een hoek), en daaruit altijd een waarde tussen de -1 en 1 leveren. Ik dacht toen "wat is een variabele die constant verandert over tijd?", makkelijk, dat is tijd. In Arduino zit de functie millis() die de verlopen tijd sinds het programma begonnen is teruggeeft. Door die waarde in de sinusfunctie mee te geven (en te normalizeren door deze te vermenigvuldigen met 2*PI), en te mappen tussen 0 en 128, kreeg het ledje een constant veranderende waarde met het verloop van een sinusgolf. Proef geslaagd!</p>
+                    
+                </div>
+                <button class="accordion">Exercise 6C</button>
+                <div class="panel">
+                   <img src="./images/arduino6C.png" alt="">
+                    <p>In mijn vrije tijd vind ik het leuk om aan de slag te gaan met P5.js. Dit is een JavaScript omgeving om in te kunnen "tekenen" en berekenen, een soort JavaScript variant van Processing. In dit programma bestaat ook de map() functie. Ik heb de code van de vorige oefening gebruikt en de mapfunctie gebruikt om de waarde van 0 - 1023 te laten verlopen van 0 - 255. Ik zag dat de ledjes een beetje moeilijk gingen flikkeren af en toe, een simpele delay(10) verhielp dit probleem.</p>
+                </div>
+                <button class="accordion">Exercise 7</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+                <button class="accordion">Exercise 8</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+                <button class="accordion">Exercise 9B</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+                <button class="accordion">Exercise 10F</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+                <button class="accordion">Exercise 11B</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+                <button class="accordion">Exercise 12B</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+                <button class="accordion">Exercise 13B</button>
+                <div class="panel">
+                    <p>...</p>
+                </div>
+
+
+
+
+
+            </main>
+
+
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = 'none';
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+</body>
