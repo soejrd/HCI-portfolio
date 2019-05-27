@@ -28,20 +28,30 @@
                 <div class="panel">
                    <img src="./images/arduino4C.png" alt="" class="right">
                     <p>Voor deze opdracht heb ik een Sinusgolf gebruikt in plaats van een forloop. Ik weet hoe for-loops werken, ik kan ze goed gebruiken, ik weet echter totaal niet hoe een sinusgolffunctie te gebruiken is. Om elke opdracht leuk voor mijzelf te maken maak ik af en toe dit soort keuzes, die het eindresultaat niet veranderen. Bij het onderzoeken van deze functie op de website van Arduino las ik dat de sin() functie een parameter verwacht (in de vorm van een hoek), en daaruit altijd een waarde tussen de -1 en 1 leveren. Ik dacht toen "wat is een variabele die constant verandert over tijd?", makkelijk, dat is tijd. In Arduino zit de functie millis() die de verlopen tijd sinds het programma begonnen is teruggeeft. Door die waarde in de sinusfunctie mee te geven (en te normalizeren door deze te vermenigvuldigen met 2*PI), en te mappen tussen 0 en 128, kreeg het ledje een constant veranderende waarde met het verloop van een sinusgolf. Proef geslaagd!</p>
-                    
                 </div>
                 <button class="accordion">Exercise 6C</button>
                 <div class="panel">
                    <img src="./images/arduino6C.png" alt="">
+                   <img src="./images/arduino6ook.jpg" alt="" style="max-width: 50%; float: right">
                     <p>In mijn vrije tijd vind ik het leuk om aan de slag te gaan met P5.js. Dit is een JavaScript omgeving om in te kunnen "tekenen" en berekenen, een soort JavaScript variant van Processing. In dit programma bestaat ook de map() functie. Ik heb de code van de vorige oefening gebruikt en de mapfunctie gebruikt om de waarde van 0 - 1023 te laten verlopen van 0 - 255. Ik zag dat de ledjes een beetje moeilijk gingen flikkeren af en toe, een simpele delay(10) verhielp dit probleem.</p>
                 </div>
                 <button class="accordion">Exercise 7</button>
                 <div class="panel">
-                    <p>...</p>
+                   <img src="./images/arduino7.png" alt="">
+                    <p>De LDR die ik gebruikt heb is iets anders dan die in de hardware kit, al is het resultaat exact hetzelfde. Ik heb de datasheets met elkaar vergeleken en alle waarden zouden op hetzelfde uit moeten komen. Ik heb bij deze opdracht geen moeilijkheden ervaren.</p>
+                    <img src="./images/arduino7.jpg" alt="">
                 </div>
                 <button class="accordion">Exercise 8</button>
                 <div class="panel">
-                    <p>...</p>
+                   <h3>Wat zou er gebeuren?</h3>
+                   <img src="./images/arduino8.png" alt="">
+                    <p>In de proef van wat er zou gebeuren als de 2 weerstanden LDR's worden dacht ik dat het logisch zou zijn dat het voltage gehalveerd wordt. De LDR’s zullen praktisch dezelfde weerstand hebben, dus gaan de elektronen net zo graag naar Vout als naar gnd, het gevolg is de helft van het voltage.</p>
+                    <h3>Berekenen</h3>
+                    <img src="./images/arduinoLDR.png" alt="" style="float: right">
+                    <p>Voor het berekenen van de voltages in de 4 scenario's heb ik een multimeter gebruikt. Zo kon ik direct het voltage meten in plaats van de door de Arduino gemeten waarden. Bij het uitvoeren van de tests bleken al mijn verwachtingen te kloppen.</p>
+                    <h3>Video</h3>
+                    <p>In de onderstaande video laat ik mijn testresultaten zien en vertel ik waarom de waarde's zijn als gemeten.</p>
+                    <video src=""></video>
                 </div>
                 <button class="accordion">Exercise 9B</button>
                 <div class="panel">
