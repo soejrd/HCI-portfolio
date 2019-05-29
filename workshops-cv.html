@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>VR Environments</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="wrapper">
+        <a href="./index.html" class="back">terug</a>
+        <h1>VR Environments</h1>
+
+        <main>
+            <p>Deze workshop staat naast VR omgevingen ook in het teken van Processing. Processing is een programma waar ik weinig ervaring mee heb, maar wel goed begrijp. Ik ben redelijk vloeiend in het gebruik van P5.js, de JavaScript variant van Processing.</p>
+            <button class="accordion">Assignment 1</button>
+            <div class="panel" style="display: block">
+                <p>Voor de eerste opdracht heb ik mijzelf een beetje uitgedaagd. Ik weet van JavaScript hoe classes werken, maar heb ze zelf nog nooit in Java gebruikt. Daarom leek het mij leuk de ellipsen een object te maken die zo hun eigen <i>leven</i> leiden. De ellipsen bewegen op een willekeurige manier, en hun grootte en kleur ook.</p>
+                <video src="./images/assignment 1-converted.mp4" autoplay loop controls preload="auto">De video wordt geladen...</video>
+                <img src="./images/CV1.png" alt="">
+            </div>
+            <button class="accordion">Assignment 2</button>
+            <div class="panel">
+                <p>Ik heb de code van assignment 1 aangepast om verschillende vormen te maken. Bij het initiëren van een object wordt gekozen wat voor vorm het wordt. Die wordt op zijn beurt geupdatet en gerendert.</p>
+                <video src="./images/assignment 2-converted.mp4" autoplay loop controls preload="auto">De video wordt geladen...</video>
+                <img src="./images/CV2.png" alt="">
+            </div>
+            <button class="accordion">Assignment 3</button>
+            <div class="panel">
+                <p>Voor deze oefening maak ik eerst een vector aan voor de muispositie. Zo kan het programma ook nog draaien als er geen muis meer is, en blijft ie goed functioneren. Dit was in principe niet nodig, maar nu weet ik ook een beetje hoe vectors werken. Het tweede punt van de lijn wordt tevens willekeurig bepaalt via de noise() functie.</p>
+                <video src="./images/assignment 3-converted.mp4" autoplay loop controls preload="auto">De video wordt geladen...</video>
+                <img src="./images/CV3.png" alt="">
+            </div>
+            <button class="accordion">Assignment CV1</button>
+            <div class="panel">
+                <p>Het was even zoeken hoe ik alles werkend kreeg, maar dat zat hem vooral in de coordinaten en het activeren van de webcam op mijn laptop. Toen dat achter de rug was ging de oefening redelijk vlekkeloos.</p>
+                <img src="./images/cvcv1.jpg" alt="">
+            </div>
+            <button class="accordion">Assignment CV2</button>
+            <div class="panel">
+                <p>Het was even zoeken hoe ik alles werkend kreeg, maar dat zat hem vooral in de coordinaten en het activeren van de webcam op mijn laptop. Toen dat achter de rug was ging de oefening redelijk vlekkeloos.</p>
+                <img src="./images/cvcv1_.png" alt="">
+                <img src="./images/cvcv2.jpg" alt="">
+            </div>
+            <button class="accordion">Bonus Assignment</button>
+            <div class="panel">
+                <p>Oe, wie zou het zijn?</p>
+                <img src="./images/cvcv3.jpg" alt="">
+            </div>            <button class="accordion">Assignment CV3</button>
+            <div class="panel">
+                <p>De 2 voorbeelden deden bij mij erg moeilijk. De "brightest point" ging redelijk vanzelf, maar had een hele slechte tracking. Ik denk dat dit puur het gevolg is van mijn inadequate webcam. Ook de tracking van het tweede voorbeeld ging ongelofelijk moeilijk. Ik heb zo snel mogelijk een screenshot gemaakt toen ie 't 1 moment deed, dus dat is alles wat ik heb. In het eerste voorbeeld had ik een discobal gemaakt die als gradiënt animeerde.</p>
+                <img src="./images/cvdisco.jpg" alt="">
+                <img src="./images/wow.jpg" alt="">
+                
+                
+            </div>
+        </main>
+    </div>
+    <script>
+        var acc = document.getElementsByClassName("accordion");
+        for (i = 0; i < acc.length; i++) {
+            acc[i].addEventListener("click", function() {
+                this.classList.toggle("active");
+                var panel = this.nextElementSibling;
+                if (panel.style.display === "block") {
+                    panel.style.display = 'none';
+                } else {
+                    panel.style.display = "block";
+                }
+            });
+        }
+
+    </script>
+</body>
